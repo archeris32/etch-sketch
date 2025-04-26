@@ -9,13 +9,21 @@ let container = document.querySelector(".container")
 
 let button = document.querySelector("button")
 button.addEventListener("click",()=>{
-    let size  = prompt("number of grid")
+    let size  = parseInt(prompt("number of grid"))
+    let divSize = 500;
+    container.innerHTML = ''
     if(size <=64){
-        for(let i = 0 ;i<=size;i++){
+        let height  = (divSize/size - 0.01) + 'px'
+        let width  = (divSize/size -0.01)+ 'px'
+        console.log(height)
+        for(let i = 0 ;i<size*size;i++){
             let div = document.createElement("div")
             container.appendChild(div)
+            div.style.width = width 
+            div.style.height = height 
             div.addEventListener('mouseover',()=>{
                 div.style.backgroundColor=randomColor()
+                
             })
             
         }

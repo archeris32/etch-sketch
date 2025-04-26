@@ -1,18 +1,14 @@
 .container{
     display: flex;
-    height: auto;
-    width: auto;
-    gap: 10px;
     flex-wrap: wrap;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+    border: 5px red solid;
+    overflow: hidden;
 }
 .container>div{
-    width: 30px;
     border: 1px solid #ccc;
-    padding: 20px;
     text-align: center;
     box-sizing: border-box;
-    
-}
-.container>div:hover{
-    background-color: red;
 }
